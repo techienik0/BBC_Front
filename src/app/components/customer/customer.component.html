@@ -1,0 +1,16 @@
+
+<form (ngSubmit)="addCustomer()">
+    <input [(ngModel)]="newCustomer.customerId" placeholder="Customer ID" name="customerId" required />
+    <input [(ngModel)]="newCustomer.name" placeholder="Name" name="name" required />
+    <input [(ngModel)]="newCustomer.email" placeholder="Email" name="email" required />
+    <input [(ngModel)]="newCustomer.phoneNumber" placeholder="Phone Number" name="phoneNumber" required />
+    <button type="submit">Add Customer</button>
+</form>
+
+<h3>Customer List</h3>
+<ul>
+    <li *ngFor="let customer of customers">
+        {{ customer.name }} - {{ customer.email }} - {{ customer.phoneNumber }}
+        <button (click)="deleteCustomer(customer.id)">Delete</button>
+    </li>
+</ul>

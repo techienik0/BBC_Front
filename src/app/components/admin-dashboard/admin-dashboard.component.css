@@ -1,0 +1,22 @@
+/* General Styles */
+#page-content-wrapper {
+    padding: 20px;
+  }
+  
+  .primary-text {
+    color: #007bff; /* Adjust primary color */
+  }
+  
+  .secondary-bg {
+    background-color: #f8f9fa; /* Adjust secondary background color */
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .table td {
+    vertical-align: middle; /* Center align content vertically */
+  }
+  

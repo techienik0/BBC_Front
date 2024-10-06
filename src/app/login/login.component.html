@@ -1,0 +1,44 @@
+<div class="login-container">
+    <div class="login-form">
+      <div class="welcome-txt">
+        <h1>Welcome to BBC - Utility Billing</h1>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div *ngIf="loginError" class="alert alert-danger">
+          {{ loginError }}
+        </div>
+  
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" placeholder="Enter your Employee ID" formControlName="employeeId" required>
+  
+        <label for="otp">OTP:</label>
+        <input type="text" id="otp" placeholder="Enter OTP" formControlName="otp" required>
+  
+        <br>
+        <button type="submit" [disabled]="loginForm.invalid || loading">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Login
+        </button>
+        <br>
+  
+        <div class="otp-options">
+          Didn't receive OTP?
+          <a href="#" (click)="resendOtp()">Resend OTP</a> |
+          <a href="#">Forgot Employee ID?</a>
+        </div>
+      </form>
+  
+      <div class="footer">
+        <a href="#">Terms of Service</a> |
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    
+    <div class="info-sec">
+      <div class="img-sec">
+        <img src="assets/images/loginpage-images.jpeg" alt="Save Energy">
+      </div>
+      <h3>Track your Energy usage</h3>
+    </div>
+  </div>
+  
